@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bingo Offline para 1</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!--Roboto-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<script src="https://randojs.com/2.0.0.js"></script>
+</head>
+<body>
+	<div id="conteiner">
+		<img id="config" src="images/engrenagem.png" alt="Configurações" onclick="config()">
+		<div id="cartela">
+			<div id="colors">
+				<div class="circles gray" onclick="changeColor(this, '#cccccc','#b4b4b4','white 2px solid','#000000','#ffffff','#939393')" title="Cor Cinza"></div>
+				<div class="circles pink" onclick="changeColor(this, '#f99696','#ff7878','white 2px solid','#a10505','#ffffff','#ffbebe')" title="Cor Rosa"></div>
+				<div class="circles green" onclick="changeColor(this, '#33ff42','#2fff22','black 2px solid','#000000','#099700','#1dda00')" title="Cor Verde"></div>
+				<div class="circles blue" onclick="changeColor(this, '#89c9ff','#6bbcff','black 2px solid','#000000','#000000','#4f96ff')" title="Cor Azul"> </div>
+				<div class="circles yellow" onclick="changeColor(this, '#f0fa54','#f7ff76','black 2px solid','#000000','#000000','#d5e200')" title="Cor Amarela"></div>
+			</div>	<!--Conteiner - Hover - border - text - shadow - selected--> 
+			<div id="tabela">
+				<table>
+				<tr>
+					<td class="bingo">B</td>
+					<td class="bingo">I</td>
+					<td class="bingo">N</td>
+					<td class="bingo">G</td>
+					<td class="bingo">O</td>
+				</tr>
+					<tr class="linhas">
+						<td class="square" title="0"><span class="squareText"></span></td>
+						<td class="square" title="1"><span class="squareText"></span></td>
+						<td class="square" title="2"><span class="squareText"></span></td>
+						<td class="square" title="3"><span class="squareText"></span></td>
+						<td class="square" title="4"><span class="squareText"></span></td>
+					</tr>
+					<tr class="linhas">
+						<td class="square" title="5"><span class="squareText"></span></td>
+						<td class="square" title="6"><span class="squareText"></span></td>
+						<td class="square" title="7"><span class="squareText"></span></td>
+						<td class="square" title="8"><span class="squareText"></span></td>
+						<td class="square" title="9"><span class="squareText"></span></td>
+					</tr>
+					<tr class="linhas">
+						<td class="square" title="10"><span class="squareText"></span></td>
+						<td class="square" title="11"><span class="squareText"></span></td>
+						<td class="square" title="12"><span class="squareText middle">image</span></td>
+						<td class="square" title="13"><span class="squareText"></span></td>
+						<td class="square" title="14"><span class="squareText"></span></td>
+					</tr>
+					<tr class="linhas">
+						<td class="square" title="15"><span class="squareText"></span></td>
+						<td class="square" title="16"><span class="squareText"></span></td>
+						<td class="square" title="17"><span class="squareText"></span></td>
+						<td class="square" title="18"><span class="squareText"></span></td>
+						<td class="square" title="19"><span class="squareText"></span></td>
+					</tr>
+					<tr class="linhas">
+						<td class="square" title="20"><span class="squareText"></span></td>
+						<td class="square" title="21"><span class="squareText"></span></td>
+						<td class="square" title="22"><span class="squareText"></span></td>
+						<td class="square" title="23"><span class="squareText"></span></td>
+						<td class="square" title="24"><span class="squareText"></span></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="buttons">
+			<div id="sorteados"></div>
+			<div id="ball"></div>
+			<div id="sortear" onclick="rollBall()">Sortear</div>
+		</div>
+	</div>
+	<div id="painelConteiner">
+		<ul>
+			<label for="inputColor">
+				Cor de Fundo:
+				<input id="inputColor"type="color" onchange="inputColor()">
+			</label>
+		</ul>
+	</div>
+	<audio id="finale">
+		<source src="../audio/EstouFeliz.wav">
+	</audio>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

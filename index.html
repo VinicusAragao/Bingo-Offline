@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bingo Offline</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<audio>
+		<source src="audio/sanfona.wav" type="audio/wav">
+	</audio>
+	<div id="conteiner">
+		<div id="images">
+			<img src="images/blue.webp" alt="Cartela de Bingo Azul">
+			<h1>BINGO OFFLINE</h1>
+			<img src="images/pink.webp" alt="Cartela de Bingo Rosa">
+		</div>
+		<div id="btns-conteiner">
+			<a href="/single/single.html"><button class="mode btn1">1 Jogador</button></a>
+			<a href="/duo/duo.html"><button class="mode btn2">2 Jogadores</button></a>
+		</div>
+	</div>
+	<div id="leaderBoardPainel">
+		<h2>Placar</h2>
+		<div id="leaderBoard">
+			<div id="leaderBoardContent"></div>
+		</div>
+		<div id="erase" onclick="erase()">Apagar</div>
+	</div>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
